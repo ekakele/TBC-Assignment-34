@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.accentColor
+                .ignoresSafeArea(.all)
+            
+            ItemsGridView(items: viewModel.items)
         }
-        .padding()
     }
 }
 

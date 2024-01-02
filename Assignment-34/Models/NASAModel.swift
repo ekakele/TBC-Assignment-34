@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Nasa
-struct Nasa: Codable {
+struct NASAModel: Codable {
     let collection: Collection
 }
 
@@ -34,7 +34,6 @@ struct Item: Codable, Identifiable {
 // MARK: - Datum
 struct Datum: Codable {
     let center: String
-    let dateCreated: String
     let description: String
     let keywords: [String]
     let mediaType: String
@@ -43,7 +42,6 @@ struct Datum: Codable {
     
     enum CodingKeys: String, CodingKey {
         case center
-        case dateCreated = "date_created"
         case description, keywords
         case mediaType = "media_type"
         case nasaID = "nasa_id"

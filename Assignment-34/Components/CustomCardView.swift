@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomCardView: View {
-    var items: [Item]
+    var item: Item
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -19,7 +19,7 @@ struct CustomCardView: View {
     }
     
     private var imageView: some View {
-        Image(MockData.previewExample.first!.href)
+        Image(MockData.previewExample.first!.links.first!.href)
             .resizable()
             .cornerRadius(20)
             .frame(width: 350, height: 250)
@@ -41,5 +41,5 @@ struct CustomCardView: View {
 }
 
 #Preview {
-    CustomCardView(items: MockData.previewExample)
+    CustomCardView(item: MockData.previewExample.first!)
 }

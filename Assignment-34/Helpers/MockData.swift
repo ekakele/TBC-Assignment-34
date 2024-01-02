@@ -58,7 +58,8 @@ struct MockData {
                 ItemLink(href: "testImage", rel: "preview", render: "image"),
                 ItemLink(href: "https://images-assets.nasa.gov/video/Moon and Saturn/Moon and Saturn.srt", rel: "captions", render: nil)
             ]
-        ) Item(
+        ),
+        Item(
             href: "https://images-assets.nasa.gov/video/Moon and Saturn/collection.json",
             data: [
                 Datum(

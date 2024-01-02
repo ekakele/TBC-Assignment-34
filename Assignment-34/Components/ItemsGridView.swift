@@ -29,7 +29,7 @@ struct ItemsGridView: View {
     private var itemsGrid: some View {
         LazyVGrid(columns: columns) {
             ForEach(items) { item in
-                CustomCardView(items: items)
+                CustomCardView(item: item)
             }
         }
     }

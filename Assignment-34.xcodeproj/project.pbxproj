@@ -12,6 +12,8 @@
 		B5280B822B441FAA00469E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5280B812B441FAA00469E17 /* Assets.xcassets */; };
 		B5280B852B441FAA00469E17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5280B842B441FAA00469E17 /* Preview Assets.xcassets */; };
 		B5280B922B44209D00469E17 /* GenericNetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = B5280B912B44209D00469E17 /* GenericNetworkManager */; };
+		B5280B942B44258B00469E17 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B932B44258B00469E17 /* MainViewModel.swift */; };
+		B5280B962B4425A300469E17 /* NASAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B952B4425A300469E17 /* NASAModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B5280B7F2B441FA700469E17 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B5280B812B441FAA00469E17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5280B842B441FAA00469E17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5280B932B44258B00469E17 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B5280B952B4425A300469E17 /* NASAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 		B5280B8D2B441FE900469E17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5280B952B4425A300469E17 /* NASAModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B5280B7F2B441FA700469E17 /* MainView.swift */,
+				B5280B932B44258B00469E17 /* MainViewModel.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 			files = (
 				B5280B802B441FA700469E17 /* MainView.swift in Sources */,
 				B5280B7E2B441FA700469E17 /* Assignment_34App.swift in Sources */,
+				B5280B962B4425A300469E17 /* NASAModel.swift in Sources */,
+				B5280B942B44258B00469E17 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

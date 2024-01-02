@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CustomCardView: View {
+    var items: [Item]
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             imageView
@@ -17,27 +19,27 @@ struct CustomCardView: View {
     }
     
     private var imageView: some View {
-        Image("testImage")
+        Image(MockData.previewExample.first!.href)
             .resizable()
             .cornerRadius(20)
-            .frame(width: 180, height: 260)
+            .frame(width: 350, height: 250)
             .scaledToFit()
     }
     
     private var mediaInfoView: some View {
         VStack(alignment: .leading) {
-            Text("image title")
-                .bold()
+            Text((MockData.previewExample.first?.data.first!.title)!)
             
-            Text("location")
+            Text((MockData.previewExample.first?.data.first!.center)!)
+                .bold()
         }
         .padding()
-        .frame(width: 180, alignment: .leading)
-        .background(.ultraThinMaterial)
+        .frame(width: 350, alignment: .leading)
+        .background(.ultraThinMaterial.opacity(0.5))
         .foregroundColor(.white)
         .cornerRadius(20)    }
 }
 
 #Preview {
-    CustomCardView()
+    CustomCardView(items: MockData.previewExample)
 }

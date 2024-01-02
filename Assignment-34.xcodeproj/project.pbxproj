@@ -15,6 +15,8 @@
 		B5280B942B44258B00469E17 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B932B44258B00469E17 /* MainViewModel.swift */; };
 		B5280B962B4425A300469E17 /* NASAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B952B4425A300469E17 /* NASAModel.swift */; };
 		B59F105E2B44A9EE00FF6E9D /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F105D2B44A9EE00FF6E9D /* CustomCardView.swift */; };
+		B59F10602B44AEF400FF6E9D /* CardsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F105F2B44AEF400FF6E9D /* CardsGridView.swift */; };
+		B59F10632B44B11700FF6E9D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F10622B44B11700FF6E9D /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B5280B932B44258B00469E17 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B5280B952B4425A300469E17 /* NASAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAModel.swift; sourceTree = "<group>"; };
 		B59F105D2B44A9EE00FF6E9D /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
+		B59F105F2B44AEF400FF6E9D /* CardsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsGridView.swift; sourceTree = "<group>"; };
+		B59F10622B44B11700FF6E9D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				B5280B8D2B441FE900469E17 /* Models */,
 				B5280B8B2B441FD700469E17 /* Screens */,
 				B59F105C2B44A93800FF6E9D /* Components */,
+				B59F10612B44B10100FF6E9D /* Helpers */,
 				B5280B8E2B441FF100469E17 /* Resources */,
 				B5280B832B441FAA00469E17 /* Preview Content */,
 			);
@@ -121,9 +126,18 @@
 		B59F105C2B44A93800FF6E9D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B59F105F2B44AEF400FF6E9D /* CardsGridView.swift */,
 				B59F105D2B44A9EE00FF6E9D /* CustomCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B59F10612B44B10100FF6E9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B59F10622B44B11700FF6E9D /* MockData.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +220,8 @@
 				B5280B7E2B441FA700469E17 /* Assignment_34App.swift in Sources */,
 				B59F105E2B44A9EE00FF6E9D /* CustomCardView.swift in Sources */,
 				B5280B962B4425A300469E17 /* NASAModel.swift in Sources */,
+				B59F10602B44AEF400FF6E9D /* CardsGridView.swift in Sources */,
+				B59F10632B44B11700FF6E9D /* MockData.swift in Sources */,
 				B5280B942B44258B00469E17 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

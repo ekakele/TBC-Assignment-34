@@ -14,14 +14,7 @@ struct MainView: View {
         ZStack {
             ItemsGridView(items: viewModel.items)
         }
-        .background(backgroundImageView)
-    }
-    
-    private var backgroundImageView: some View {
-        Image("galaxyBackgroundImage")
-            .resizable()
-            .scaledToFill()
-            .edgesIgnoringSafeArea(.all)
+        .background(backgroundImageView())
     }
 }
 

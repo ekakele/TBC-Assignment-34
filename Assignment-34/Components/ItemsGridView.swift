@@ -11,6 +11,8 @@ struct ItemsGridView: View {
     
     var items: [Item]
     
+    //    @StateObject var viewModel: MainViewModel
+    
     var columns = [
         GridItem(.flexible(), spacing: 0)
     ]
@@ -28,10 +30,22 @@ struct ItemsGridView: View {
     
     private var itemsGrid: some View {
         LazyVGrid(columns: columns) {
-            ForEach(items) { item in
-                CustomCardView(item: item)
+            ForEach(items, id: \.href) { item in
+                setupCustomCardView(item: item)
             }
         }
+    }
+    
+    private func setupCustomCardView(item: Item) -> some View {
+        let image = item.links.first!.href
+        let title = item.data.first?.title ?? "Title"
+        let center = item.data.first?.center ?? "Center"
+        
+        return CustomCardView(
+            image: image,
+            title: title,
+            center: center
+        )
     }
 }
 

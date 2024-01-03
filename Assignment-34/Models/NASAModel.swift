@@ -8,31 +8,31 @@
 import Foundation
 
 // MARK: - Nasa
-struct NASAModel: Codable {
+struct NASAModel: Decodable {
     let collection: Collection
 }
 
 // MARK: - Collection
-struct Collection: Codable {
-    let version: String
-    let href: String
+struct Collection: Decodable {
+//    let version: String
+//    let href: String
     
     let items: [Item]
     
-    let metadata: Metadata
-    let links: [CollectionLink]
+//    let metadata: Metadata
+//    let links: [CollectionLink]
 }
 
 // MARK: - Item
-struct Item: Codable, Identifiable {
-    var id = UUID()
+struct Item: Decodable {
+//    var id = UUID()
     let href: String //videos
     let data: [Datum] //info
     let links: [ItemLink] //image
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct Datum: Decodable {
     let center: String
     let description: String
     let keywords: [String]
@@ -51,26 +51,26 @@ struct Datum: Codable {
 
 
 // MARK: - ItemLink
-struct ItemLink: Codable {
+struct ItemLink: Decodable {
     let href: String
     let rel: String
     let render: String?
 }
 
 // MARK: - CollectionLink
-struct CollectionLink: Codable {
-    let rel, prompt: String
-    let href: String
-}
+//struct CollectionLink: Decodable {
+//    let rel, prompt: String
+//    let href: String
+//}
 
 // MARK: - Metadata
-struct Metadata: Codable {
-    let totalHits: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case totalHits = "total_hits"
-    }
-}
+//struct Metadata: Decodable {
+//    let totalHits: Int
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case totalHits = "total_hits"
+//    }
+//}
 
 
 //// MARK: - Nasa

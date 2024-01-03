@@ -8,29 +8,50 @@
 import SwiftUI
 
 struct CustomCardView: View {
-    var item: Item
+    var image: String
+    var title: String
+    var center: String
+    
+    //    @StateObject var viewModel: MainViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            imageView
-            mediaInfoView
+            itemImageView
+            itemInfoView
         }
         .shadow(radius: 3)
     }
-    
-    private var imageView: some View {
-        Image(MockData.previewExample.first!.links.first!.href)
-            .resizable()
-            .cornerRadius(20)
-            .frame(width: 350, height: 250)
-            .scaledToFit()
+
+    private var itemImageView: some View {
+        fetchImage()
     }
     
-    private var mediaInfoView: some View {
+    private func fetchImage() -> some View {
+        let imageURL = URL(string: image)
+        
+        return AsyncImage(
+            url: imageURL,
+            content: { fetchedImage in
+                fetchedImage
+                    .resizable()
+                    .cornerRadius(20)
+                    .frame(width: 350, height: 250)
+                    .scaledToFit()
+                
+            }, placeholder: {
+                Image("imagePlaceholder")
+                    .resizable()
+                    .cornerRadius(20)
+                    .frame(width: 350, height: 250)
+                    .scaledToFit()
+            })
+    }
+    
+    private var itemInfoView: some View {
         VStack(alignment: .leading) {
-            Text((MockData.previewExample.first?.data.first!.title)!)
+            Text(title)
             
-            Text((MockData.previewExample.first?.data.first!.center)!)
+            Text(center)
                 .bold()
         }
         .padding()
@@ -41,5 +62,5 @@ struct CustomCardView: View {
 }
 
 #Preview {
-    CustomCardView(item: MockData.previewExample.first!)
+    CustomCardView(image: MockData.previewExample.first!.links.first!.href, title: MockData.previewExample.first!.data.first!.title, center: MockData.previewExample.first!.data.first!.center)
 }

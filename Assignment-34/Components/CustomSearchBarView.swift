@@ -50,6 +50,9 @@ struct CustomSearchBarView: View {
             .offset(x: 10)
             .foregroundColor(searchText.isEmpty ? Color.secondary : Color.black)
             .opacity((searchText.isEmpty ? 0.0 : 1.0))
+            .onTapGesture {
+                searchText = ""
+            }
     }
     
     private var iconView: some View {

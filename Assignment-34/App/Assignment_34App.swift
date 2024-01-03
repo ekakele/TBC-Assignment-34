@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct Assignment_34App: App {
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor.white]
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainView()

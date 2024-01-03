@@ -12,7 +12,7 @@ class MainViewModel: ObservableObject {
     // MARK: - Properties
     private var networkManager: GenericNetworkManager
     @Published var items: [Item] = []
-    
+    @Published var searchText: String = ""
     
     // MARK: - Init
     init() {

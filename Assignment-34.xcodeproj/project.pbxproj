@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B520D0592B4567CB00FC95E4 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D0582B4567CB00FC95E4 /* SearchBarView.swift */; };
+		B520D0592B4567CB00FC95E4 /* CustomSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D0582B4567CB00FC95E4 /* CustomSearchBarView.swift */; };
 		B520D05B2B456A1700FC95E4 /* backgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B520D05A2B456A1700FC95E4 /* backgroundImageView.swift */; };
 		B5280B7E2B441FA700469E17 /* Assignment_34App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B7D2B441FA700469E17 /* Assignment_34App.swift */; };
 		B5280B802B441FA700469E17 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5280B7F2B441FA700469E17 /* MainView.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B520D0582B4567CB00FC95E4 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		B520D0582B4567CB00FC95E4 /* CustomSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBarView.swift; sourceTree = "<group>"; };
 		B520D05A2B456A1700FC95E4 /* backgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundImageView.swift; sourceTree = "<group>"; };
 		B5280B7A2B441FA700469E17 /* Assignment-34.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment-34.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5280B7D2B441FA700469E17 /* Assignment_34App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_34App.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			children = (
 				B59F10642B44CC2400FF6E9D /* ItemsGridView.swift */,
 				B59F105D2B44A9EE00FF6E9D /* CustomCardView.swift */,
-				B520D0582B4567CB00FC95E4 /* SearchBarView.swift */,
+				B520D0582B4567CB00FC95E4 /* CustomSearchBarView.swift */,
 				B520D05A2B456A1700FC95E4 /* backgroundImageView.swift */,
 			);
 			path = Components;
@@ -227,7 +227,7 @@
 				B5280B7E2B441FA700469E17 /* Assignment_34App.swift in Sources */,
 				B59F105E2B44A9EE00FF6E9D /* CustomCardView.swift in Sources */,
 				B5280B962B4425A300469E17 /* NASAModel.swift in Sources */,
-				B520D0592B4567CB00FC95E4 /* SearchBarView.swift in Sources */,
+				B520D0592B4567CB00FC95E4 /* CustomSearchBarView.swift in Sources */,
 				B59F10632B44B11700FF6E9D /* MockData.swift in Sources */,
 				B59F10652B44CC2400FF6E9D /* ItemsGridView.swift in Sources */,
 				B5280B942B44258B00469E17 /* MainViewModel.swift in Sources */,

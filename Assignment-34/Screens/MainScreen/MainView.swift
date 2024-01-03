@@ -19,9 +19,13 @@ struct MainView: View {
 //                }
             
             CustomSearchBarView(searchText: $query)
-            .onChange(of: query) { value in
-                viewModel.fetchData(with: value)
-            }
+                .onChange(of: query, { oldValue, newValue in
+                    viewModel.fetchData(with: newValue)
+                })
+            
+//            .onChange(of: query) { value in
+//                viewModel.fetchData(with: value)
+//            }
                 itemsGridWithBackgroundView
 //                .searchable(text: $viewModel.searchText)
                 

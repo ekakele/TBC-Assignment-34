@@ -17,7 +17,7 @@ class MainViewModel: ObservableObject {
     // MARK: - Init
     init() {
         self.networkManager = GenericNetworkManager(baseURL: "https://images-api.nasa.gov/")
-        fetchData(with: "") //saturn / earth /
+        fetchData(with: "saturn") // saturn / earth /
     }
     
     //MARK: - Methods

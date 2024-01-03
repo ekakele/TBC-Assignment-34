@@ -39,7 +39,7 @@ struct CustomCardView: View {
                     .scaledToFit()
                 
             }, placeholder: {
-                Image("imagePlaceholder")
+                Image("defaultImage")
                     .resizable()
                     .cornerRadius(20)
                     .frame(width: 350, height: 250)

@@ -12,11 +12,16 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Color.accentColor
-                .ignoresSafeArea(.all)
-            
             ItemsGridView(items: viewModel.items)
         }
+        .background(backgroundImageView)
+    }
+    
+    private var backgroundImageView: some View {
+        Image("galaxyBackgroundImage")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
     }
 }
 

@@ -14,6 +14,9 @@ struct CustomSearchBarView: View {
     var body: some View {
         ZStack {
             searchBarStackView
+                .onChange(of: searchText) { value in
+                    print(value)
+                }
         }
         .background(backgroundImageView())
     }
@@ -26,7 +29,7 @@ struct CustomSearchBarView: View {
         .font(.headline)
         .padding()
         .background(searchBarShapeView)
-            .padding()
+        .padding()
     }
     
     private var searchBarShapeView: some View {
@@ -41,6 +44,7 @@ struct CustomSearchBarView: View {
     private var textFieldView: some View {
         TextField("Search in NASA Database", text: $searchText)
             .foregroundColor(.black)
+            .autocorrectionDisabled(true)
             .overlay(overlayIconView, alignment: .trailing)
     }
     
@@ -63,4 +67,5 @@ struct CustomSearchBarView: View {
 
 #Preview {
     CustomSearchBarView(searchText: .constant(""))
+        .previewLayout(.sizeThatFits)
 }

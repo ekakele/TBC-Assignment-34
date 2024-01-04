@@ -15,9 +15,9 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             CustomSearchBarView(searchText: $viewModel.query)
-                .onChange(of: viewModel.query, { oldValue, newValue in
+                .onChange(of: viewModel.query) {
                     viewModel.fetchData()
-                })
+                }
             itemsGridWithBackgroundView
         }
     }

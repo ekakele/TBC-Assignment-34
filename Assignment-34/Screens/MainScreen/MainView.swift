@@ -8,39 +8,37 @@
 import SwiftUI
 
 struct MainView: View {
+    // MARK: - Properties
     @StateObject var viewModel = MainViewModel()
     @State private var query: String = ""
     
+    // MARK: - Body
     var body: some View {
         NavigationStack {
-//                CustomSearchBarView(searchText: $viewModel.searchText)
-//                .onChange(of: viewModel.searchText) { value in
-//                    viewModel.fetchData()
-//                }
-            
+            //with View's property
             CustomSearchBarView(searchText: $query)
                 .onChange(of: query, { oldValue, newValue in
                     viewModel.fetchData(with: newValue)
                 })
+            itemsGridWithBackgroundView
+            //with searchable modifier
+            //                .searchable(text: $viewModel.searchText)
             
-//            .onChange(of: query) { value in
-//                viewModel.fetchData(with: value)
-//            }
-                itemsGridWithBackgroundView
-//                .searchable(text: $viewModel.searchText)
-                
-
+            //with ViewModel's property
+            //            CustomSearchBarView(searchText: $viewModel.searchText)
+            //                .onChange(of: viewModel.searchText) { oldValue, newValue in
+            //                    viewModel.fetchData()
+            //                }
         }
     }
-
-    var itemsGridWithBackgroundView: some View {
+    
+    // MARK: - Components
+    private var itemsGridWithBackgroundView: some View {
         ZStack {
             backgroundImageView()
             ItemsGridView(items: viewModel.items)
         }
-//        .background(backgroundImageView())
     }
-    
 }
 
 #Preview {

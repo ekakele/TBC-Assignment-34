@@ -8,6 +8,7 @@
 import Foundation
 
 struct MockData {
+    // MARK: - Properties
     static let previewExample: [Item] = [
         Item(
             href: "https://images-assets.nasa.gov/video/Moon and Saturn/collection.json",

@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct CustomCardView: View {
+    // MARK: - Properties
     var image: String
     var title: String
     var center: String
     
     //    @StateObject var viewModel: MainViewModel
     
+    // MARK: - Body
     var body: some View {
         ZStack(alignment: .bottom) {
             itemImageView
@@ -21,7 +23,8 @@ struct CustomCardView: View {
         }
         .shadow(radius: 3)
     }
-
+    
+    // MARK: - Components
     private var itemImageView: some View {
         fetchImage()
     }

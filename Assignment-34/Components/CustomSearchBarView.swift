@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct CustomSearchBarView: View {
-    
+    // MARK: - Properties
     @Binding var searchText: String
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             searchBarStackView
-                .onChange(of: searchText) { value in
-                    print(value)
-                }
         }
         .background(backgroundImageView())
     }
     
+    // MARK: - Components
     private var searchBarStackView: some View {
         HStack {
             iconView

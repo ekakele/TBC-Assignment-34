@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct backgroundImageView: View {
+
+    // MARK: - Body
     var body: some View {
         Image("galaxyBackgroundImage")
             .resizable()

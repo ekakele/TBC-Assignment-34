@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct ItemsGridView: View {
-    
+    // MARK: - Properties
     var items: [Item]
-    
+    var columns = [GridItem(.flexible(), spacing: 0)]
     //    @StateObject var viewModel: MainViewModel
     
-    var columns = [
-        GridItem(.flexible(), spacing: 0)
-    ]
-    
+    // MARK: - Body
     var body: some View {
         gridScrollView
     }
     
+    // MARK: - Components
     private var gridScrollView: some View {
         ScrollView {
             itemsGrid

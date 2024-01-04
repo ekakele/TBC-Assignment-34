@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Methods
 func generateVideoURL(originalURL: String) -> String? {
     let pattern = #"https:\/\/([^\/]+)\/video\/([^\/]+)\/collection\.json"#
     

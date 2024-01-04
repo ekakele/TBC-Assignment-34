@@ -13,8 +13,6 @@ struct ImageCardView: View {
     var title: String
     var center: String
     
-    //    @StateObject var viewModel: MainViewModel
-    
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .bottom) {

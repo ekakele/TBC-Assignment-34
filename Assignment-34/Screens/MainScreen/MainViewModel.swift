@@ -12,13 +12,12 @@ class MainViewModel: ObservableObject {
     // MARK: - Properties
     private var networkManager: GenericNetworkManager
     @Published var items: [Item] = []
-//    @Published var videoLinks: [String] = []
     @Published var query: String = "saturn"
     
     // MARK: - Init
     init() {
         self.networkManager = GenericNetworkManager(baseURL: "https://images-api.nasa.gov/")
-        fetchData() // saturn, earth
+        fetchData()
     }
     
     //MARK: - Methods

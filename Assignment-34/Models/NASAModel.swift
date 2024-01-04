@@ -14,16 +14,11 @@ struct NASAModel: Decodable {
 
 // MARK: - Collection
 struct Collection: Decodable {
-//    let href: String
     let items: [Item]
-    //    let version: String
-    //    let metadata: Metadata
-    //    let links: [CollectionLink]
 }
 
 // MARK: - Item
 struct Item: Decodable {
-    //    var id = UUID()
     var href: String //videos
     let data: [Datum] //info
     let links: [ItemLink] //image
@@ -56,18 +51,3 @@ struct ItemLink: Decodable {
     let rel: String
     let render: String?
 }
-
-// MARK: - CollectionLink
-//struct CollectionLink: Decodable {
-//    let rel, prompt: String
-//    let href: String
-//}
-
-// MARK: - Metadata
-//struct Metadata: Decodable {
-//    let totalHits: Int
-//
-//    enum CodingKeys: String, CodingKey {
-//        case totalHits = "total_hits"
-//    }
-//}

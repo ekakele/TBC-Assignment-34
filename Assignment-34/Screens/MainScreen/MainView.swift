@@ -10,25 +10,15 @@ import SwiftUI
 struct MainView: View {
     // MARK: - Properties
     @StateObject var viewModel = MainViewModel()
-    @State private var query: String = ""
     
     // MARK: - Body
     var body: some View {
         NavigationStack {
-            //with View's property
-            CustomSearchBarView(searchText: $query)
-                .onChange(of: query, { oldValue, newValue in
-                    viewModel.fetchData(with: newValue)
+            CustomSearchBarView(searchText: $viewModel.query)
+                .onChange(of: viewModel.query, { oldValue, newValue in
+                    viewModel.fetchData()
                 })
             itemsGridWithBackgroundView
-            //with searchable modifier
-            //                .searchable(text: $viewModel.searchText)
-            
-            //with ViewModel's property
-            //            CustomSearchBarView(searchText: $viewModel.searchText)
-            //                .onChange(of: viewModel.searchText) { oldValue, newValue in
-            //                    viewModel.fetchData()
-            //                }
         }
     }
     

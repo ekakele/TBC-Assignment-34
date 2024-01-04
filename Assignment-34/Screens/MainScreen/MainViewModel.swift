@@ -12,16 +12,16 @@ class MainViewModel: ObservableObject {
     // MARK: - Properties
     private var networkManager: GenericNetworkManager
     @Published var items: [Item] = []
-    //    @Published var searchText: String = "saturn"
+    @Published var query: String = "saturn"
     
     // MARK: - Init
     init() {
         self.networkManager = GenericNetworkManager(baseURL: "https://images-api.nasa.gov/")
-        fetchData(with: "saturn") // saturn, earth
+        fetchData() // saturn, earth
     }
     
     //MARK: - Methods
-    func fetchData(with query: String) {
+    func fetchData() {
         let endpointString = "search?q=\(query)&media_type=video"
         networkManager.fetchData(endpoint: endpointString) { (result: Result<NASAModel, Error>) in
             switch result {

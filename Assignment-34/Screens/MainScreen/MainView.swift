@@ -26,7 +26,12 @@ struct MainView: View {
     private var itemsGridWithBackgroundView: some View {
         ZStack {
             backgroundImageView()
-            ItemsGridView(items: viewModel.items)
+            
+            if viewModel.items.isEmpty {
+                NoDataView()
+            } else {
+                ItemsGridView(items: viewModel.items)
+            }
         }
     }
 }

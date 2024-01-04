@@ -1,5 +1,5 @@
 //
-//  backgroundImageView.swift
+//  BackgroundImageView.swift
 //  Assignment-34
 //
 //  Created by Eka Kelenjeridze on 03.01.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct backgroundImageView: View {
+struct BackgroundImageView: View {
 
     // MARK: - Body
     var body: some View {
@@ -19,5 +19,5 @@ struct backgroundImageView: View {
 }
 
 #Preview {
-    backgroundImageView()
+    BackgroundImageView()
 }

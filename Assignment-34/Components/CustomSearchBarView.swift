@@ -16,7 +16,7 @@ struct CustomSearchBarView: View {
         ZStack {
             searchBarStackView
         }
-        .background(backgroundImageView())
+        .background(BackgroundImageView())
     }
     
     // MARK: - Components

@@ -25,7 +25,7 @@ struct MainView: View {
     // MARK: - Components
     private var itemsGridWithBackgroundView: some View {
         ZStack {
-            backgroundImageView()
+            BackgroundImageView()
             
             if viewModel.items.isEmpty {
                 NoDataView()

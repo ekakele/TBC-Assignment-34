@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomCardView: View {
+struct ImageCardView: View {
     // MARK: - Properties
     var image: String
     var title: String
@@ -65,5 +65,5 @@ struct CustomCardView: View {
 }
 
 #Preview {
-    CustomCardView(image: MockData.previewExample.first!.links.first!.href, title: MockData.previewExample.first!.data.first!.title, center: MockData.previewExample.first!.data.first!.center)
+    ImageCardView(image: MockData.previewExample.first!.links.first!.href, title: MockData.previewExample.first!.data.first!.title, center: MockData.previewExample.first!.data.first!.center)
 }

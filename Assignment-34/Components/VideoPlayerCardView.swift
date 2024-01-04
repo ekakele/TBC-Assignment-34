@@ -1,5 +1,5 @@
 //
-//  VideoPlayerView.swift
+//  VideoPlayerCardView.swift
 //  Assignment-34
 //
 //  Created by Eka Kelenjeridze on 04.01.24.
@@ -8,12 +8,13 @@
 import SwiftUI
 import AVKit
 
-struct VideoPlayerView: View {
+struct VideoPlayerCardView: View {
+    // MARK: - Properties
     @State private var player = AVPlayer()
     @State private var isPlaying = false
-    private let videoURL = URL(string: "https://images-assets.nasa.gov/video/NHQ_2019_0311_Go%20Forward%20to%20the%20Moon/NHQ_2019_0311_Go%20Forward%20to%20the%20Moon~small.mp4")
-    
-    
+    var videoURLString: String
+
+    // MARK: - Body
     var body: some View {
         videoPlayerView
             .overlay {
@@ -21,10 +22,11 @@ struct VideoPlayerView: View {
             }
     }
     
+    // MARK: - Components
     private var videoPlayerView: some View {
         VideoPlayer(player: player)
             .onAppear() {
-                player = AVPlayer(url: videoURL!)
+                player = AVPlayer(url: URL(string: videoURLString)!)
             }
             .frame(width: 350, height: 250)
             .cornerRadius(20)
@@ -61,5 +63,5 @@ struct VideoPlayerView: View {
 }
 
 #Preview {
-    VideoPlayerView()
+    VideoPlayerCardView(videoURLString: MockData.previewExample.first!.href)
 }

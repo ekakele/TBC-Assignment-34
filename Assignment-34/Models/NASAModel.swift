@@ -14,7 +14,7 @@ struct NASAModel: Decodable {
 
 // MARK: - Collection
 struct Collection: Decodable {
-    let href: String
+//    let href: String
     let items: [Item]
     //    let version: String
     //    let metadata: Metadata
@@ -24,7 +24,7 @@ struct Collection: Decodable {
 // MARK: - Item
 struct Item: Decodable {
     //    var id = UUID()
-    let href: String //videos
+    var href: String //videos
     let data: [Datum] //info
     let links: [ItemLink] //image
 }

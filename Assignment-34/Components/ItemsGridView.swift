@@ -29,20 +29,29 @@ struct ItemsGridView: View {
     private var itemsGrid: some View {
         LazyVGrid(columns: columns) {
             ForEach(items, id: \.href) { item in
-                setupCustomCardView(item: item)
+                setupImageCardView(item: item)
+                setupVideoCardView(item: item)
             }
         }
     }
     
-    private func setupCustomCardView(item: Item) -> some View {
+    private func setupImageCardView(item: Item) -> some View {
         let image = item.links.first!.href
         let title = item.data.first?.title ?? "Title"
         let center = item.data.first?.center ?? "Center"
         
-        return CustomCardView(
+        return ImageCardView(
             image: image,
             title: title,
             center: center
+        )
+    }
+    
+    private func setupVideoCardView(item: Item) -> some View {
+        let videoURLString = item.href
+        
+        return VideoPlayerCardView(
+            videoURLString: videoURLString
         )
     }
 }

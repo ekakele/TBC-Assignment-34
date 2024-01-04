@@ -12,6 +12,7 @@ class MainViewModel: ObservableObject {
     // MARK: - Properties
     private var networkManager: GenericNetworkManager
     @Published var items: [Item] = []
+//    @Published var videoLinks: [String] = []
     @Published var query: String = "saturn"
     
     // MARK: - Init
@@ -27,7 +28,12 @@ class MainViewModel: ObservableObject {
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
-                    self.items = data.collection.items
+                    self.items = data.collection.items.map { item in
+                        
+                        var newItem = item
+                        newItem.href = generateVideoURL(originalURL: item.href) ?? ""
+                        return newItem
+                    }
                 }
             case .failure(let error):
                 print("Error fetching items: \(error.localizedDescription)")

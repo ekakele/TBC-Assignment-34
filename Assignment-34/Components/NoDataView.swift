@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NoDataView: View {
+    
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
             Text("404")
